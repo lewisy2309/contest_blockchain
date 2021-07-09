@@ -3,11 +3,15 @@ import json
 
 class Wallet:
     unique_id= ""
-    balance=0
+    balance=100
     history=[]
 
     def __init__(self):
         self.unique_id=self.generate_unique_id()
+
+    def __init__(self,unique_id):
+        self.unique_id=unique_id
+
 
     def add_balance(self, fund):
         self.balance+=fund

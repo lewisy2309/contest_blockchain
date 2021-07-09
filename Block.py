@@ -15,6 +15,12 @@ class Block:
     def __init__(self, string):
         self.hash = hashlib.sha256(string.encode('utf-8')).hexdigest()
 
+    def __init__(self, base_hash ,hash,parent_hash):
+        self.hash=hash
+        self.base_hash=base_hash
+        self.parent_hash=parent_hash
+
+
     def check_ash(self):
         pass
 
@@ -51,5 +57,8 @@ class Block:
             self.parent_hash = jsonObject['parent_hash']
             self.base_hash = jsonObject['base_hash']
             self.transaction = jsonObject['tansaction']
+a=Block('a')
+
+print(a.hash)
 
 
