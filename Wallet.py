@@ -42,3 +42,6 @@ class Wallet:
             self.balance=jsonObject['balance']
             self.history=jsonObject['history']
 
+a=Wallet()
+a.save()
+
